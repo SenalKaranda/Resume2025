@@ -1,36 +1,28 @@
 ---
-import ResumeLayout from '@/layouts/ResumeLayout.astro';
+import { ResumeLayout } from '@/layouts/ResumeLayout';
 import { Introduction } from '@/components/sections/Introduction';
 import { Experience } from '@/components/sections/Experience';
 import { Skills } from '@/components/sections/Skills';
 import { Education } from '@/components/sections/Education';
 import { Projects } from '@/components/sections/Projects';
 import { Certifications } from '@/components/sections/Certifications';
-import { Publications } from '@/components/sections/Publications';
 import { Achievements } from '@/components/sections/Achievements';
-import { Testimonials } from '@/components/sections/Testimonials';
 import { OpenSource } from '@/components/sections/OpenSource';
 import { Mentoring } from '@/components/sections/Mentoring';
-import { Research } from '@/components/sections/Research';
-import { Awards } from '@/components/sections/Awards';
 import { Volunteering } from '@/components/sections/Volunteering';
 import { Contact } from '@/components/sections/Contact';
 ---
 
-<ResumeLayout title="John Programmer | Senior Software Engineer">
-  <Introduction client:load />
-  <Experience client:load />
-  <Skills client:load />
-  <Education client:load />
-  <Projects client:load />
-  <Certifications client:load />
-  <Publications client:load />
-  <Achievements client:load />
-  <Testimonials client:load />
-  <OpenSource client:load />
-  <Mentoring client:load />
-  <Research client:load />
-  <Awards client:load />
-  <Volunteering client:load />
-  <Contact client:load />
+<ResumeLayout title="Senal Karanda | Applications Admin & BI Analyst" client:load>
+  <Introduction />
+  <Skills />
+  <Experience />
+  <Education />
+  <Certifications />
+  <Projects />
+  <Achievements />
+  <Mentoring />
+  <Volunteering />
+  <OpenSource />
+  <Contact />
 </ResumeLayout>

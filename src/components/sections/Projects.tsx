@@ -43,7 +43,6 @@ export function Projects() {
   return (
     <section id="projects" className="py-8">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <Folder className="h-6 w-6" />
         Projects
       </h2>
       

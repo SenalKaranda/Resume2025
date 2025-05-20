@@ -13,25 +13,53 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
+    title: 'Business Intelligence & Data',
+    icon: <LineChart className="h-5 w-5" />,
+    skills: [
+      { name: 'Power BI', level: 95 },
+      { name: 'SQL', level: 90 },
+      { name: 'Data Integration', level: 85 },
+      { name: 'Reporting Automation', level: 85 },
+    ],
+  },
+  {
+    title: 'IT Administration',
+    icon: <Code className="h-5 w-5" />,
+    skills: [
+      { name: 'Application Administration', level: 90 },
+      { name: 'System Integration', level: 85 },
+      { name: 'Microsoft 365', level: 85 },
+      { name: 'Active Directory', level: 80 },
+      { name: 'Windows Server', level: 80 },
+      { name: 'Workflow Automation', level: 80 },
+    ],
+  },
+  {
+    title: 'Cybersecurity & Training',
+    icon: <Lightbulb className="h-5 w-5" />,
+    skills: [
+      { name: 'Cybersecurity', level: 85 },
+      { name: 'Teaching & Mentoring', level: 90 },
+      { name: 'Communication', level: 90 },
+      { name: 'Teamwork', level: 90 },
+    ],
+  },
+  {
     title: 'Frontend Development',
     icon: <Code className="h-5 w-5" />,
     skills: [
-      { name: 'React', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'HTML/CSS', level: 95 },
-      { name: 'Next.js', level: 85 },
-      { name: 'Vue.js', level: 75 },
+      { name: 'React', level: 85 },
+      { name: 'TypeScript', level: 80 },
+      { name: 'HTML/CSS', level: 85 },
     ],
   },
   {
     title: 'Backend Development',
     icon: <LineChart className="h-5 w-5" />,
     skills: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Express', level: 85 },
-      { name: 'REST APIs', level: 90 },
-      { name: 'GraphQL', level: 75 },
-      { name: 'MongoDB', level: 70 },
+      { name: 'Node.js', level: 75 },
+      { name: 'Express', level: 75 },
+      { name: 'REST APIs', level: 80 },
     ],
   },
   {
@@ -39,10 +67,12 @@ const skillsData: SkillCategory[] = [
     icon: <Lightbulb className="h-5 w-5" />,
     skills: [
       { name: 'UX/UI Design', level: 75 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'Testing', level: 85 },
-      { name: 'Performance Optimization', level: 90 },
-      { name: 'Accessibility', level: 85 },
+      { name: 'CI/CD', level: 75 },
+      { name: 'Testing', level: 80 },
+      { name: 'Performance Optimization', level: 80 },
+      { name: 'Accessibility', level: 80 },
+      { name: 'Vendor Management', level: 75 },
+      { name: 'Technical Documentation', level: 80 },
     ],
   },
 ];
@@ -50,7 +80,7 @@ const skillsData: SkillCategory[] = [
 export function Skills() {
   return (
     <section id="skills" className="py-8">
-      <h2 className="text-3xl font-bold mb-6">Skills & Expertise</h2>
+      <h2 className="text-3xl font-bold mb-6">Skills</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillsData.map((category, index) => (

@@ -10,22 +10,22 @@ interface EducationItem {
 
 const educationData: EducationItem[] = [
   {
-    degree: 'Master of Science in Computer Science',
-    institution: 'Stanford University',
-    period: '2014 - 2016',
-    description: 'Specialized in Human-Computer Interaction and Web Technologies. Thesis on "Improving Web Accessibility Through Machine Learning".',
+    degree: 'Credible BI Builder',
+    institution: 'Qualifacts',
+    period: '2023 - Present',
+    description: 'A 3-day course that covers the fundamentals of BI and the Credible BI toolset.',
   },
   {
-    degree: 'Bachelor of Science in Software Engineering',
-    institution: 'MIT',
-    period: '2010 - 2014',
-    description: 'Graduated with honors. Participated in various hackathons and open-source projects.',
+    degree: 'Credible System Administrator',
+    institution: 'Qualifacts',
+    period: '2023 - Present',
+    description: 'A 3-day course that covers the fundamentals of the Credible EHR system and the System Administrator toolset.',
   },
   {
-    degree: 'Professional Certifications',
-    institution: 'Various',
-    period: '2016 - Present',
-    description: 'AWS Certified Developer, Google Cloud Professional, React Certification, Accessibility Specialist (IAAP)',
+    degree: 'Microsoft Dashboard in a Day (DIAD)',
+    institution: 'Microsoft',
+    period: '2025',
+    description: 'A 1-day course that covers the fundamentals of Microsoft Power BI and the workflow of creating a dashboard.',
   },
 ];
 
@@ -33,8 +33,7 @@ export function Education() {
   return (
     <section id="education" className="py-8">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <BookOpen className="h-6 w-6" />
-        Education & Certifications
+        Professional Training
       </h2>
       
       <div className="space-y-6">

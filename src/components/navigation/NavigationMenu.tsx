@@ -10,21 +10,17 @@ interface NavigationItem {
 }
 
 const navigationItems: NavigationItem[] = [
-  { id: 'intro', label: 'Introduction' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills & Expertise' },
-  { id: 'education', label: 'Education' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'publications', label: 'Publications & Talks' },
-  { id: 'achievements', label: 'Achievements' },
-  { id: 'testimonials', label: 'Testimonials' },
-  { id: 'open-source', label: 'Open Source' },
-  { id: 'mentoring', label: 'Mentoring & Leadership' },
-  { id: 'research', label: 'Research & Patents' },
-  { id: 'awards', label: 'Awards & Recognition' },
-  { id: 'volunteering', label: 'Community & Volunteering' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'intro', label: 'Introduction 👋' },
+  { id: 'skills', label: 'Skills 🛠️' },
+  { id: 'experience', label: 'Experience 💼' },
+  { id: 'education', label: 'Training 📚' },
+  { id: 'certifications', label: 'Certifications 🏆' },
+  { id: 'projects', label: 'Projects 🚀' },
+  { id: 'achievements', label: 'Achievements ⭐' },
+  { id: 'mentoring', label: 'Leadership 👥' },
+  { id: 'volunteering', label: 'Community 🤝' },
+  { id: 'open-source', label: 'Contributions 🌟' },
+  { id: 'contact', label: 'Contact 📧' },
 ];
 
 export function NavigationMenu() {

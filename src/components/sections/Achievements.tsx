@@ -59,10 +59,8 @@ export function Achievements() {
   return (
     <section id="achievements" className="py-8">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <Trophy className="h-6 w-6" />
-        Key Achievements
+        Achievements
       </h2>
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {achievements.map((achievement, index) => (
           <Card key={index} className="transition-all hover:shadow-md">

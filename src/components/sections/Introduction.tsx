@@ -1,16 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, Mail, Github, Linkedin } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, Globe } from 'lucide-react';
+import { ExportResume } from '@/components/ExportResume';
 
 export function Introduction() {
   return (
     <section id="intro" className="py-8">
 
       <div className="flex flex-wrap gap-4 pt-2">
-        <Button className="gap-2">
-          <Download className="h-4 w-4" />
-          Download Resume
-        </Button>
+        <ExportResume />
       </div>
       <br></br>
       <div className="space-y-6">
@@ -39,33 +37,39 @@ export function Introduction() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
-          <Card>
-            <CardContent className="p-4 flex items-center gap-4">
-              <Github className="h-6 w-6" />
-              <div>
-                <h3 className="font-medium">GitHub</h3>
-                <p className="text-sm text-muted-foreground">@johnprogrammer</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 flex items-center gap-4">
-              <Linkedin className="h-6 w-6" />
-              <div>
-                <h3 className="font-medium">LinkedIn</h3>
-                <p className="text-sm text-muted-foreground">john-programmer</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="sm:col-span-2 md:col-span-1">
-            <CardContent className="p-4 flex items-center gap-4">
-              <Mail className="h-6 w-6" />
-              <div>
-                <h3 className="font-medium">Email</h3>
-                <p className="text-sm text-muted-foreground">john@example.com</p>
-              </div>
-            </CardContent>
-          </Card>
+          <a href="https://github.com/SenalKaranda" target="_blank" rel="noopener noreferrer">
+            <Card className="transition-colors hover:bg-muted/50 cursor-pointer">
+              <CardContent className="p-4 flex items-center gap-4">
+                <Github className="h-6 w-6" />
+                <div>
+                  <h3 className="font-medium">GitHub</h3>
+                  <p className="text-sm text-muted-foreground">@SenalKaranda</p>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
+          <a href="https://www.linkedin.com/in/skaranda/" target="_blank" rel="noopener noreferrer">
+            <Card className="transition-colors hover:bg-muted/50 cursor-pointer">
+              <CardContent className="p-4 flex items-center gap-4">
+                <Linkedin className="h-6 w-6" />
+                <div>
+                  <h3 className="font-medium">LinkedIn</h3>
+                  <p className="text-sm text-muted-foreground">SKaranda</p>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
+          <a href="https://catdadstudios.com" target="_blank" rel="noopener noreferrer" className="sm:col-span-2 md:col-span-1">
+            <Card className="transition-colors hover:bg-muted/50 cursor-pointer">
+              <CardContent className="p-4 flex items-center gap-4">
+                <Globe className="h-6 w-6" />
+                <div>
+                  <h3 className="font-medium">Website</h3>
+                  <p className="text-sm text-muted-foreground">Cat Dad Studios</p>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
         </div>
       </div>
     </section>

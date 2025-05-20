@@ -49,8 +49,7 @@ export function Volunteering() {
   return (
     <section id="volunteering" className="py-8">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <Heart className="h-6 w-6" />
-        Community & Volunteering
+        Community
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

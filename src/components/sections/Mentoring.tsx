@@ -48,7 +48,6 @@ export function Mentoring() {
   return (
     <section id="mentoring" className="py-8">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <Trophy className="h-6 w-6" />
         Mentoring & Leadership
       </h2>
       
