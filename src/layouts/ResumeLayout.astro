@@ -1,0 +1,111 @@
+---
+import '@/styles/globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { ProfileHeader } from '@/components/header/ProfileHeader';
+import { NavigationMenu } from '@/components/navigation/NavigationMenu';
+import { Footer } from '@/components/Footer';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "John Programmer's Professional Resume" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		
+		<title>{title}</title>
+	</head>
+	<body>
+		<ThemeProvider client:load>
+			<div class="min-h-screen flex flex-col">
+				<header class="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+					<div class="container">
+						<ProfileHeader client:load />
+					</div>
+				</header>
+				
+				<div class="flex-1">
+					<div class="container flex-1 items-start md:grid md:grid-cols-[1fr_200px] lg:grid-cols-[1fr_240px] md:gap-6 lg:gap-8 py-8">
+						<main class="relative py-6 md:py-0 md:pr-8">
+							<slot />
+						</main>
+						<aside class="hidden md:block">
+							<div class="fixed w-[200px] lg:w-[240px]">
+								<div class="pt-8">
+									<NavigationMenu client:load />
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+				
+				<Footer />
+			</div>
+		</ThemeProvider>
+
+		<script>
+			// Register intersection observer for scroll animations
+			document.addEventListener('DOMContentLoaded', () => {
+				const sections = document.querySelectorAll('section');
+				
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('section-visible');
+						}
+					});
+				}, { threshold: 0.1 });
+				
+				sections.forEach(section => {
+					observer.observe(section);
+				});
+			});
+		</script>
+
+		<style is:global>
+			:root {
+				scroll-behavior: smooth;
+				--header-height: 8rem;
+			}
+			
+			section {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease, transform 0.6s ease;
+			}
+			
+			.section-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* Improve container width on larger screens */
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 1rem;
+			}
+
+			@media (min-width: 1400px) {
+				.container {
+					max-width: 1400px;
+				}
+			}
+		</style>
+	</body>
+</html>
