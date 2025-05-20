@@ -7,15 +7,15 @@ export function ProfileHeader() {
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 py-6">
       <div className="flex items-center gap-4">
         <Avatar className="h-20 w-20 border-2 border-primary/10">
-          <AvatarImage src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Profile" />
+          <AvatarImage src="/studying.png" alt="Profile" />
           <AvatarFallback>JP</AvatarFallback>
         </Avatar>
         <div>
           <h1 className="text-2xl font-bold">Senal Karanda</h1>
-          <p className="text-muted-foreground">Senior Software Engineer</p>
+          <p className="text-muted-foreground">Applications Administrator & BI Analyst</p>
           <div className="flex flex-wrap gap-2 mt-2">
-            <Badge variant="secondary">Available for work</Badge>
-            <Badge variant="outline">Remote</Badge>
+            <Badge variant="secondary">Available for Work</Badge>
+            <Badge variant="outline">Remote / Hybrid</Badge>
           </div>
         </div>
       </div>
