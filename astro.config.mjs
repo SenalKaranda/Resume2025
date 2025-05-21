@@ -5,8 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://SenalKaranda.github.io',
-  base: '/Resume2025/',
+  site: 'https://senalkaranda.github.io',
   integrations: [
     react(),
     tailwind(),

@@ -1,5 +1,5 @@
 ---
-import '@/styles/globals.css';
+import '../styles/globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { ProfileHeader } from '@/components/header/ProfileHeader';
 import { NavigationMenu } from '@/components/navigation/NavigationMenu';
@@ -35,7 +35,7 @@ const { title, description = "John Programmer's Professional Resume" } = Astro.p
 			<div class="min-h-screen flex flex-col">
 				<header class="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 					<div class="container">
-						<ProfileHeader client:load />
+						<ProfileHeader />
 					</div>
 				</header>
 				
@@ -47,7 +47,7 @@ const { title, description = "John Programmer's Professional Resume" } = Astro.p
 						<aside class="hidden md:block">
 							<div class="fixed w-[200px] lg:w-[240px]">
 								<div class="pt-8">
-									<NavigationMenu client:load />
+									<NavigationMenu />
 								</div>
 							</div>
 						</aside>
