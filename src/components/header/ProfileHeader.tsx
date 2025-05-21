@@ -15,8 +15,8 @@ export function ProfileHeader() {
           <AlertDialogTrigger asChild>
             <button>
               <Avatar className="h-20 w-20 border-2 border-primary/10">
-                <AvatarImage src="/studying.png" alt="Profile" />
-                <AvatarFallback>JP</AvatarFallback>
+                <AvatarImage src={`${import.meta.env.BASE_URL}studying.png`} alt="Profile" />
+                <AvatarFallback>SK</AvatarFallback>
               </Avatar>
             </button>
           </AlertDialogTrigger>
