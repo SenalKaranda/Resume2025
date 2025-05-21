@@ -8,7 +8,8 @@ import pages from '@astrojs/gh-pages';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://SenalKaranda.github.io/Resume2025/',
+  site: 'https://SenalKaranda.github.io',
+  base: '/Resume2025/',
   integrations: [
     react(),
     tailwind({
@@ -16,4 +17,5 @@ export default defineConfig({
     }),
     pages(),
   ],
+  outDir: './dist',
 });
