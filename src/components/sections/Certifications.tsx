@@ -1,54 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Calendar, ExternalLink } from 'lucide-react';
-
-interface Certification {
-  name: string;
-  issuer: string;
-  date: string;
-  validUntil?: string;
-  credentialId: string;
-  link: string;
-  skills: string[];
-}
-
-const certifications: Certification[] = [
-  {
-    name: "AWS Certified Solutions Architect - Professional",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    validUntil: "2026",
-    credentialId: "AWS-PSA-123456",
-    link: "#",
-    skills: ["AWS", "Cloud Architecture", "Security", "Scalability"]
-  },
-  {
-    name: "Google Cloud Professional Data Engineer",
-    issuer: "Google Cloud",
-    date: "2022",
-    validUntil: "2024",
-    credentialId: "GCP-PDE-789012",
-    link: "#",
-    skills: ["Google Cloud", "Data Engineering", "Machine Learning", "Big Data"]
-  },
-  {
-    name: "Unity Certified Professional Programmer",
-    issuer: "Unity Technologies",
-    date: "2021",
-    credentialId: "UCP-345678",
-    link: "#",
-    skills: ["Unity", "C#", "Game Development", "3D Graphics"]
-  },
-  {
-    name: "Microsoft Certified: Azure Data Scientist Associate",
-    issuer: "Microsoft",
-    date: "2022",
-    validUntil: "2024",
-    credentialId: "MSFT-DS-901234",
-    link: "#",
-    skills: ["Azure", "Data Science", "Machine Learning", "Python"]
-  }
-];
+import { Calendar, ExternalLink } from 'lucide-react';
+import { resumeData } from '@/data/resumeData';
 
 export function Certifications() {
   return (
@@ -58,7 +11,7 @@ export function Certifications() {
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {certifications.map((cert, index) => (
+        {resumeData.certifications.map((cert, index) => (
           <Card key={index} className="transition-all hover:shadow-md">
             <CardHeader>
               <div className="space-y-2">

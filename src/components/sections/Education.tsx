@@ -1,33 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen, Calendar } from 'lucide-react';
-
-interface EducationItem {
-  degree: string;
-  institution: string;
-  period: string;
-  description: string;
-}
-
-const educationData: EducationItem[] = [
-  {
-    degree: 'Credible BI Builder',
-    institution: 'Qualifacts',
-    period: '2023 - Present',
-    description: 'A 3-day course that covers the fundamentals of BI and the Credible BI toolset.',
-  },
-  {
-    degree: 'Credible System Administrator',
-    institution: 'Qualifacts',
-    period: '2023 - Present',
-    description: 'A 3-day course that covers the fundamentals of the Credible EHR system and the System Administrator toolset.',
-  },
-  {
-    degree: 'Microsoft Dashboard in a Day (DIAD)',
-    institution: 'Microsoft',
-    period: '2025',
-    description: 'A 1-day course that covers the fundamentals of Microsoft Power BI and the workflow of creating a dashboard.',
-  },
-];
+import { Calendar } from 'lucide-react';
+import { resumeData } from '@/data/resumeData';
 
 export function Education() {
   return (
@@ -37,7 +10,7 @@ export function Education() {
       </h2>
       
       <div className="space-y-6">
-        {educationData.map((item, index) => (
+        {resumeData.education.map((item, index) => (
           <Card key={index} className="transition-all hover:shadow-md">
             <CardHeader>
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">

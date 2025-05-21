@@ -1,49 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, Calendar } from 'lucide-react';
-
-interface VolunteerItem {
-  role: string;
-  organization: string;
-  period: string;
-  description: string;
-  impact: string[];
-}
-
-const volunteerData: VolunteerItem[] = [
-  {
-    role: "Tech Mentor",
-    organization: "Code for Good",
-    period: "2022 - Present",
-    description: "Mentoring underprivileged students in web development and programming basics.",
-    impact: [
-      "Mentored 20+ students",
-      "90% course completion rate",
-      "5 students placed in tech internships"
-    ]
-  },
-  {
-    role: "Workshop Leader",
-    organization: "Women in Tech",
-    period: "2021 - Present",
-    description: "Leading monthly workshops on various programming topics for women entering tech.",
-    impact: [
-      "Conducted 15+ workshops",
-      "200+ total participants",
-      "Created learning materials"
-    ]
-  },
-  {
-    role: "Open Source Maintainer",
-    organization: "Python Education Foundation",
-    period: "2020 - Present",
-    description: "Maintaining educational resources and tools for Python learners.",
-    impact: [
-      "500+ contributions",
-      "Helped 1000+ learners",
-      "Created 3 popular tutorials"
-    ]
-  }
-];
+import { Calendar } from 'lucide-react';
+import { resumeData } from '@/data/resumeData';
 
 export function Volunteering() {
   return (
@@ -52,8 +9,8 @@ export function Volunteering() {
         Community
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {volunteerData.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {resumeData.volunteering.map((item, index) => (
           <Card key={index} className="transition-all hover:shadow-md">
             <CardHeader>
               <div className="space-y-2">
