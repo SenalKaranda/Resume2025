@@ -9,9 +9,7 @@ export default defineConfig({
   base: '/Resume2025/',
   integrations: [
     react(),
-    tailwind({
-      applyBaseStyles: true,
-    }),
+    tailwind(),
   ],
   outDir: './dist',
 });
