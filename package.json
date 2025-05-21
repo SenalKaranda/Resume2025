@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -68,6 +69,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/html2canvas": "^0.5.35"
+    "@types/html2canvas": "^0.5.35",
+    "gh-pages": "^6.3.0"
   }
 }
