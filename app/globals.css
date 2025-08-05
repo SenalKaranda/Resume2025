@@ -8,6 +8,51 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@media print {
+  html, body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .card {
+    box-shadow: none !important;
+    background: white !important;
+    page-break-inside: avoid;
+    padding: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  header, nav, button, .theme-toggle, .back-to-top {
+    display: none !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+
+  h1, h2, h3 {
+    color: black !important;
+    break-after: avoid;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .tag, .badge {
+    border: 1px solid #ccc !important;
+    background: #eee !important;
+    color: #333 !important;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
