@@ -11,7 +11,7 @@ export function Skills() {
           <Card key={index} className="transition-all hover:shadow-md">
             <CardContent className="p-6">
               <div className="mb-4">
-                <h3 className="text-xl font-semibold">{category.title}</h3>
+                <h3 className="text-xl font-semibold">{category.category}</h3>
               </div>
               <div className="space-y-4">
                 {category.skills.map((skill) => (

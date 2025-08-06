@@ -11,6 +11,7 @@ import { Contact } from '@/components/sections/Contact';
 export default function Home() {
   return (
     <div
+      className="print-page"
       style={{
         maxWidth: 1280,
         margin: '0 auto',

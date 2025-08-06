@@ -125,3 +125,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  body {
+    background: white !important;
+    zoom: 0.75; /* shrink everything a bit */
+  }
+
+  nav, footer, .print-hide {
+    display: none !important;
+  }
+
+  .print-page {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5 {
+    orphans: 3;
+    widows: 3;
+  }
+}
+

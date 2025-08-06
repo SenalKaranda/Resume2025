@@ -14,7 +14,7 @@ export function Education() {
             <CardHeader>
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                 <div>
-                  <CardTitle>{item.degree}</CardTitle>
+                  <CardTitle>{item.title}</CardTitle>
                   <CardDescription>{item.institution}</CardDescription>
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground">

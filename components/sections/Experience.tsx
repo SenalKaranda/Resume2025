@@ -15,7 +15,7 @@ export function Experience() {
             <CardHeader>
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                 <div>
-                  <CardTitle>{item.role}</CardTitle>
+                  <CardTitle>{item.title}</CardTitle>
                   <CardDescription>{item.company}</CardDescription>
                 </div>
                 <Badge variant="outline" className="w-fit">
@@ -24,7 +24,9 @@ export function Experience() {
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p>{item.description}</p>
+              {item.description.map((line: string, idx: number) => (
+                <p key={idx}>{line}</p>
+              ))}
               <div className="flex flex-wrap gap-2">
                 {item.skills.map((skill) => (
                   <Badge key={skill} variant="secondary">

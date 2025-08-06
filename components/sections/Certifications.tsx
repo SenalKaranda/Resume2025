@@ -15,7 +15,7 @@ export function Certifications() {
             <CardHeader>
               <div className="space-y-2">
                 <CardTitle className="flex items-start justify-between">
-                  <span>{cert.name}</span>
+                  <span>{cert.title}</span>
                   <a
                     href={cert.link}
                     target="_blank"
